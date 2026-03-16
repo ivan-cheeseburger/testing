@@ -11,6 +11,12 @@ root.geometry("400x500")
 container = tk.Frame(root)
 container.pack(fill="both", expand=True)
 
+
+
+
+
+
+
 def employee_page():
     page = tk.Toplevel(root)
     page.title("Helpdesk Ticket System")
@@ -32,7 +38,9 @@ def employee_page():
         add_employee(emp_no.get(), first_name.get(), last_name.get())
 
     tk.Button(page, text="Add Employee", command=save).pack(pady=10)
+    tk.Button(page, text="Back", command=page.destroy).pack(pady=10)
 
+tk.Label(root, text="Dashboard", font=("Arial", 20)).pack(pady=20)
 tk.Button(root, text="Employees", width=20, command=employee_page).pack(pady=10)
 
 root,tk.mainloop()
