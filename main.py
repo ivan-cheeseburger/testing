@@ -35,3 +35,4 @@ def employee_page():
 
 tk.Button(root, text="Employees", width=20, command=employee_page).pack(pady=10)
 
+root,tk.mainloop()
